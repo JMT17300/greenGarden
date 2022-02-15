@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- liens style -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Txte onlet de navigation -->
+  <title>Green Garden</title>
+</head>
+
+<body>
+  <!-- Barre de navigation: logo -->
+  <div class="m-4 fanny">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div>
+          <a href="#" class="navbar-brand">
+            <img src="media/logoGG.png" height="50" alt="greenGarden">
+          </a>
+        </div>
+        <!-- Barre de navigation: pages -->
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">Accueil</a>
+            <a href="#" class="nav-item nav-link">Plantes</a>
+            <a href="#" class="nav-item nav-link">Fleurs</a>
+            <a href="#" class="nav-item nav-link">Potager</a>
+            <a href="#" class="nav-item nav-link">Extérieur</a>
+            <a href="#" class="nav-item nav-link">Outils</a>
+            <a href="#" class="nav-item nav-link">Serres</a>
+          </div>
+        </div>
+        <!-- Barre de navigation: rechercher -->
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">GO</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <!-- FIN de la Barre de navigation -->
+  <div>
+    <h1>GREEN GARDEN La référence pour le jardin</h1>
+  </div>
+  <!-- Début du Caroussel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+     </div>
+     <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="media/Caroussel_1.png" class="d-block w-50 mx-auto" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="media/Caroussel_2.png" class="d-block w-50 mx-auto" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="media/Caroussel_3.png" class="d-block w-50 mx-auto" alt="...">
+      </div>
+    </div>
+  </div>
+  <!--Fin du Caroussel -->
+
+  <!-- inscription newsletter -->
+  <div class="cadre">
+    <h5 class="text-green ">Inscrivez vous pour recevoir notre Newsletter</h5>
+    <p class="small text-muted">Veuillez saisir votre e-mail pour vous inscrire à notre
+      newsletter. En cliquant sur le bouton 'valider' vous acceptez expressement nos CGV/CGU & les cookies</p>
+    <form action="#">
+      <div class="input-group mb-3 ">
+        <span class="mx-auto">
+          <input class="form" type="text" placeholder="Veuillez saisir votre email ICI"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-success dessous" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Validation</button>
+        </span>
+      </div>
+    </form>
+  </div>
+
+  <!-- Les offres de saison -->
+  <div>
+    <h1>Les offres de saison</h1>
+    <br>
+  </div>
+
+  <div class="wrapper">
+    <div class="container-fluid">
+
+      <div class="row g-1">
+        <div class="col-12 col-md-6 col-lg-6 ">
+          <img src="media/offreSaison_1.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card-body">
+            <h5 class="card-title">Promo fleurs</h5>
+            <p class="card-text">Un concours est un ensemble d'épreuves mettant en compétition des candidats pour
+              accéder à des emplois, des marchés, des récompenses ou des avantages publics dont le nombre est fixé à
+              l'avance. Par exemple : un concours pour l'accès aux fonctions de professeurs, de policiers, pour l'accès
+              en classe préparatoire ou en faculté de médecine. Les épreuves peuvent comporter plusieurs types de
+              compétition.
+
+              Un concours peut mettre en compétition aussi bien des individus que des groupes, voire des entreprises.
+
+              Un concours a aussi comme définition : jeu s'adressant au public, organisé le plus souvent à des fins
+              publicitaires et à l'issue duquel les gagnants remportent des lots.
+            </p>
+            <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i> Go
+              Promo</button>
+          </div>
+        </div>
+
+        <div class="row g-1">
+          <div class="col-12 col-md-6 col-lg-6">
+            <img src="media/offreSaison_2.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="card-body">
+              <h5 class="card-title">Jeu concours</h5>
+              <p class="card-text">Un concours est un ensemble d'épreuves mettant en compétition des candidats pour
+                accéder à des emplois, des marchés, des récompenses ou des avantages publics dont le nombre est fixé à
+                l'avance. Par exemple : un concours pour l'accès aux fonctions de professeurs, de policiers, pour
+                l'accès en classe préparatoire ou en faculté de médecine. Les épreuves peuvent comporter plusieurs types
+                de compétition.
+
+                Un concours peut mettre en compétition aussi bien des individus que des groupes, voire des entreprises.
+
+                Un concours a aussi comme définition : jeu s'adressant au public, organisé le plus souvent à des fins
+                publicitaires et à l'issue duquel les gagnants remportent des lots.
+              </p>
+              <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i> Go
+                Promo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-1">
+          <div class="col-12 col-md-6 col-lg-6">
+            <img src="media/offreSaison_3.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="card-body">
+              <h5 class="card-title">Foire aux abris</h5>
+              <p class="card-text">Un abri ou cabanon de jardin est une construction légère de type mobilière faisant
+                office de débarras à l'extérieur. L'installation d'un abri de jardin fait l'objet d'une simple
+                déclaration (disponible sur le net) en mairie si sa surface au sol est inférieure à 20m², au delà un
+                permis de construire est obligatoire. Sont également concernés les abris voiture. On y entrepose et y
+                protège des intempéries du matériel voué aux loisirs ou petits travaux (jardinage, bricolage, sport,
+                mobilier de jardin...).
+              </p>
+              <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i> Go
+                Promo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-1">
+          <div class="col-12 col-md-6 col-lg-6">
+            <img src="media/offreSaison_4.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="card-body">
+              <h5 class="card-title">Promo Outillage</h5>
+              <p class="card-text">Un outil est un objet physique utilisé par un être vivant directement, ou par
+                l'intermédiaire d'une machine, afin d'exercer une action le plus souvent mécanique, ou thermique, sur un
+                élément d'environnement à traiter (matière brute, objet fini ou semi-fini, être vivant, etc). Il
+                améliore l'efficacité des actions entreprises ou donne accès à des actions impossibles autrement.
+                Beaucoup procurent un avantage mécanique en fonctionnant selon le principe d'une machine simple, comme
+                la pince-monseigneur, qui exploite le principe du levier.
+              </p>
+              <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+                Go
+                Promo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN des offres de saison -->
+
+    <!-- Categorie produits -->
+    <div>
+      <h1>Le plus grand choix disponible sur le net</h1>
+
+    </div>
+
+    <div class="card-group">
+      <div class="card categories">
+        <img src="media/Catégorie_GG_1_plantes.png" class="card-img-top jmt" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Les plantes</h5>
+          <p class="card-text">Les plantes (Plantae) sont des organismes photosynthétiques et autotrophes,
+            caractérisés
+            par des cellules végétales. Elles forment l'un des règnes des Eukaryota1. Ce règne est un groupe
+            monophylétique comprenant les plantes terrestres...</p>
+          <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Voir les
+            Plantes</button>
+        </div>
+      </div>
+
+      <div class="card categories">
+        <img src="media/Catégorie_GG_2_fleurs.png" class="card-img-top jmt" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Les fleurs</h5>
+          <p class="card-text">En biologie, chez toutes sortes de plantes à fleurs (angiospermes), la fleur
+            constitue
+            l'organe de la reproduction sexuée et l'ensemble des « enveloppes » qui l'entourent. Après la
+            pollinisation,
+            la fleur est fécondée et se transforme en fruit..</p>
+          <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Voir les
+            Fleurs</button>
+        </div>
+      </div>
+
+      <div class="card categories">
+        <img src="media/Catégorie_GG_3_Potager.png" class="card-img-top jmt" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Le potager</h5>
+          <p class="card-text">Un jardin potager1, ou plus simplement potager, est un jardin ou une partie de
+            jardin où se
+            pratique la culture vivrière de plantes potagères destinées à la consommation familiale, soit
+            principalement
+            des légumes, des fruits non cultivables en verger...</p>
+          <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Voir le
+            Potager</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-group">
+      <div class="card categories">
+        <img src="media/Catégorie_GG_4_amenagements_exterieur.png" class="card-img-top jmt" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Aménagements Extérieur</h5>
+          <p class="card-text">L'aménagement est un outil stratégique qui n'a pas de modèle universel et qui
+            doit être
+            périodiquement mis à jour. Il est appliqué au cas par cas, selon le contexte et l'histoire du
+            massif.
+            L'aménagiste pose des hypothèses, fait des paris...</p>
+          <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Voir
+            aménagement ext</button>
+        </div>
+      </div>
+
+      <div class="card categories">
+        <img src="media/Catégorie_GG_5_outils.png" class="card-img-top jmt" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Les outils</h5>
+          <p class="card-text">Un outil est un objet physique utilisé par un être vivant directement, ou par
+            l'intermédiaire d'une machine, afin d'exercer une action le plus souvent mécanique, ou thermique,
+            sur un
+            élément d'environnement...</p>
+          <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Voir les
+            Outils</button>
+        </div>
+      </div>
+      <div class="card categories">
+        <img src="media/Catégorie_GG_6_Serres.png" class="card-img-top jmt" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Les serres</h5>
+          <p class="card-text">Une serre est une structure close ou semi-ouverte translucide, en verre ou en
+            plastique,
+            soutenue par une structure métallique ou en bois, destinée en général à la production agricole. Elle
+            vise à
+            protéger les cultures vivrières...</p>
+          <button class="btn btn-success" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i>
+            Voir les
+            Serres</button>
+        </div>
+      </div>
+    </div>
+    <!-- Formulaires-->
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="w-500 py-3 flex-shrink-0">
+      <div class="container-fluid py-3">
+        <div class="row gy-3 gx-5">
+
+          <div class="col-12 col-lg-2 col-md-3 text-center">
+            <h6 class="text-green ">Service clients</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="#">Comment commander</li>
+                <li><a href="#">Méthodes de paiement</a></li>
+                <li><a href="#">Expéditions&Livraisons</a></li>
+                <li><a href="#">Questions fréquentes FAQ</a></li>
+              </ul>
+          </div>
+          <div class="col-12 col-lg-2 col-md-3 text-center">
+            <h6 class="text-green">Informations</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="#">Qualité des produits</a></li>
+                <li><a href="#">Garanties des produits</a></li>
+                <li><a href="#">Conseils de plantations</a></li>
+                <li><a href="#">Catalogies</a></li>
+              </ul>
+          </div>
+          <div class="col-12 col-lg-2 col-md-3 text-center">
+            <h6 class="text-green">Green Garden</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="#">Qui sommes nous</a></li>
+                <li><a href="#">CGV/CGU</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Mentions légales</a></li>
+              </ul>
+          </div>
+          <div class="col-12 col-lg-2 col-md-3 text-center">
+            <h6 class="text-green mb-3">Mon compte</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="#">M'identifier</a></li>
+                <li><a href="#">Créer mon compte</a></li>
+                <li><a href="#">mes commandes</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+          </div>
+          <div class="col-12 col-lg-4 col-md-12">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.9750044345855714%2C45.95488674672228%2C-0.9608423709869386%2C45.961599395276465&amp;layer=mapnik&amp;marker=45.958243172648714%2C-0.9679234027862549" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=45.95824&amp;mlon=-0.96792#map=17/45.95824/-0.96792">Afficher une carte plus grande</a></small>     
+          </div>
+
+        </div>
+        
+      </div>
+      
+    </footer>
+
+
+
+
+
+  </div>
+  </div>
+
+  </div>
+
+  <script src="js/bootstrap.bundle.js"> </script>
+  <script src="js/script.js"> </script>
+
+</body>
+
+</html>
