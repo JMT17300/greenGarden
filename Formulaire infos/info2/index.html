@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <title>***Formulaire d'informations***</title>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <form action="#">
+                <fieldset>
+                    <legend>FORMULAIRE D'INFORMATIONS</legend>
+                    <span class='error' id="spanNom"></span>
+                    <div>
+                        <label for="nom" class=""></label>
+                        <input type="text" id="nom" placeholder="Saisir le Nom" class="form-control" required pattern="[A-Za-z]+">
+                    </div>
+                    <span class='error'></span>
+                    <div>
+                        <label for="prenom"></label>
+                        <input type="text" id="prenom" placeholder="Saisir le Prenom" class="form-control" required pattern="[A-Za-z]+">
+                    </div>
+                    <div>
+                        <label for="date"></label>
+                        <input type="date" id="date" class="form-control">
+                    </div>
+                    <div>
+                        <label for="email"></label>
+                        <input  type="email" name="mail" id="mail" placeholder="Saisir l'email" class="form-control" required >
+                    </div>
+                    <span class='error'></span>
+                    <div>
+                        <label for="password1"></label>
+                        <input type="password" id="password1" placeholder="Saisir le mot de passe" class="form-control">
+                    </div>
+                    <div>
+                        <label for="password2"></label>
+                        <input type="password" id="password2" placeholder="Confirmation du mot de passe" class="form-control">
+                    </div>
+                    <br>
+                    <div><input type="button" value="valider" class="boutonvalider"  id="button"></div>
+                </fieldset> 
+            </form>
+        </div>
+    </div>
+</div> 
+<script src="js/script.js"></script>
+</body> 
+
+
+
+
+</html>
