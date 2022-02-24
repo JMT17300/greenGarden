@@ -46,11 +46,58 @@
     </nav>
   </div>
   <!-- FIN de la Barre de navigation -->
-  <h1>NOUS CONTACTER</h1>
+ 
 
 
-  <h5>il faudra mettre des cartes produits</h5>
-  <h5>ICI</h5>
+  <body>
+    <h1>Formulaire de contact</h1>
+    <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+       <table class="form-style">
+          <tr>
+             <td>
+                <label>
+                   Votre nom <span class="required">*</span>
+                </label>
+             </td>
+             <td>
+                <input type="text" name="name" class="long"/>
+                <span class="error" id="errorname"></span>
+             </td>
+          </tr>
+          <tr>
+             <td>
+                <label>
+                   Votre adresse e-mail <span class="required">*</span>
+                </label>
+             </td>
+             <td>
+                <input type="email" name="email" class="long"/>
+                <span class="error" id="erroremail"></span>
+             </td>
+          </tr>
+          <tr>
+             <td>
+                <label>
+                   Message <span class="required">*</span>
+                </label>
+             </td>
+             <td>
+                <textarea name="message" class="long field-textarea"></textarea>
+                <span class="error" id="errormsg"></span>
+             </td>
+          </tr>
+          <tr>
+             <td></td>
+             <td>
+                <input type="submit" value="Envoyer">      
+                <input type="reset" value="Réinitialiser"> 
+             </td>
+          </tr>
+       </table>
+    </form>
+    <script type="text/javascript" src="js/js.js"></script>
+
+ </body>
     <!-- DEBUT DU FOOTER -->
     <footer class="w-500 py-3 flex-shrink-0">
         <div class="container-fluid py-3">
@@ -91,10 +138,10 @@
                 <li><a href="/pages/compteContact.html">Contact</a></li>
               </ul>
             </div>
-            <div class="col-12 col-lg-4 col-md-12">
-              <iframe width="425" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            <div class="col-12 col-lg-4 md=12 text-center">
+              <iframe width="280" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=-0.9722900390625001%2C45.95475994442432%2C-0.9574949741363527%2C45.96142785993867&amp;layer=mapnik&amp;marker=45.95809400248005%2C-0.9648925065994263"
-                style="border: 1px solid black"></iframe><br /><small><a
+                style="border: 5px solid green"></iframe><br /><small><a
                   href="https://www.openstreetmap.org/?mlat=45.95809&amp;mlon=-0.96489#map=17/45.95809/-0.96489">Afficher
                   une carte plus grande</a></small>
   
