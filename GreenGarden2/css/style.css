@@ -5,9 +5,10 @@
 
 
 body {
-  background: rgb(241, 234, 222);
+  background: rgb(244, 240, 235);
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 
@@ -28,8 +29,10 @@ h5{
 }
 
 .btn-success{
-  float: right;
+  float: center;
 }
+
+
 .wrapper h5{
 
   font-weight: 900;
@@ -71,8 +74,8 @@ h6{
 }
 
 .cadre{
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-bottom: 50px;
   border: 1px solid green
 
