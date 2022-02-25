@@ -46,11 +46,87 @@
     </nav>
   </div>
   <!-- FIN de la Barre de navigation -->
-  <h1>CREER UN COMPTE</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form action="get">
+          <fieldset>
+            <h1>CRÉER VOTRE COMPTE GREEN GARDEN</h1>
 
+            <span class="" id="sp1">Error</span>
 
-  <h5>il faudra mettre des cartes produits</h5>
-  <h5>ICI</h5>
+            <div>
+              <label for="lastName" class=""></label>
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Saisissez votre Prénom"
+                class="form-control"
+                required
+                pattern="[A-Za-z]+"
+                name="last name"
+              />
+            </div>
+            <span class="" id="sp2">Error</span>
+            <div>
+              <label for="name"></label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Saisissez votre Nom"
+                class="form-control"
+                required
+                pattern="[A-Za-z]+"
+                name="name"
+              />
+            </div>
+<div>
+              <label for="date"></label>
+              <input type="date" id="date" class="form-control" required />
+            </div>
+            <div>
+              <label for="email"></label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Saisissez votre @email"
+                class="form-control"
+                required
+              />
+            </div>
+            <span class="" id="sp3">Error</span>
+            <div>
+              <label for="pw"></label>
+              <input
+                type="password"
+                id="pw"
+                placeholder="Saisissez votre mot de passe"
+                class="form-control"
+              />
+            </div>
+            <div>
+              <label for="cpw"></label>
+              <input
+                type="password"
+                id="cpw"
+                placeholder="Confirmez votre mot de passe"
+                class="form-control"
+              />
+            </div>
+            <br />
+            <div>
+              <input
+                type="button"
+                value="Validation"
+                class="form-control"
+                id="boton"
+              />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
     <!-- DEBUT DU FOOTER -->
     <footer class="w-500 py-3 flex-shrink-0">
         <div class="container-fluid py-3">
