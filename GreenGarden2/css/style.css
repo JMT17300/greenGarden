@@ -126,9 +126,14 @@ h6{
 .form-control:focus {
   background: #212922;
  }
- 
+ span{
+  visibility: hidden;
+}
 
-
+.error{
+  visibility: visible;
+  color: red;
+}
 footer {
   background: whitesmoke;
   margin-top: 3%;
