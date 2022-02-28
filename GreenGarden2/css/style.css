@@ -124,9 +124,13 @@ h6{
 }
   
 .form-control:focus {
-  background: #212922;
+  background: #ebf1ec;
  }
- span{
+
+ .form{
+  background: #ebf1ec;
+ }
+ .compte{
   visibility: hidden;
 }
 
