@@ -1,0 +1,16 @@
+Exercice 1
+select id from client where prenom='Muriel' and password=sha1('test11');
+
+Exercice 2
+select nom, count(nom) from commande_ligne group by nom having count(nom)>1;
+
+Exercice 3
+select nom, count(nom), group_concat(commande_id) from commande_ligne group by nom having count(nom)>1;
+
+Exercice 4
+ update commande_ligne set prix_total = quantite*prix_unitaire where id between 1 and 120;
+
+Exercice 5
+ select client.nom, prenom, date_achat, commande_id, sum(prix_total) from commande_ligne join commande on commande_id=commande.id join client on client_id=client.id group by commande_id;
+
+Exercice 6
