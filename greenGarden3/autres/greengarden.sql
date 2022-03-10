@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 10, 2022 at 01:40 PM
+-- Generation Time: Mar 10, 2022 at 03:47 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `greengarden`
 --
+CREATE DATABASE IF NOT EXISTS `greengarden` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `greengarden`;
 
 -- --------------------------------------------------------
 
@@ -28,14 +30,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `bdl`
 --
 
-CREATE TABLE `bdl` (
+DROP TABLE IF EXISTS `bdl`;
+CREATE TABLE IF NOT EXISTS `bdl` (
   `bdl_code_client` int(11) NOT NULL,
   `bdl_date` datetime DEFAULT NULL,
   `bdl_numero` int(11) DEFAULT NULL,
   `bdl_num_cde` int(11) DEFAULT NULL,
   `bdl_reference__produit` int(11) DEFAULT NULL,
   `bdl_designation_produit` varchar(20) DEFAULT NULL,
-  `bdl_quantite_livree` int(11) DEFAULT NULL
+  `bdl_quantite_livree` int(11) DEFAULT NULL,
+  PRIMARY KEY (`bdl_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -44,7 +48,8 @@ CREATE TABLE `bdl` (
 -- Table structure for table `commande`
 --
 
-CREATE TABLE `commande` (
+DROP TABLE IF EXISTS `commande`;
+CREATE TABLE IF NOT EXISTS `commande` (
   `commande_code_client` int(11) NOT NULL,
   `commande_date` datetime DEFAULT NULL,
   `commande_num_cde` int(11) DEFAULT NULL,
@@ -57,7 +62,9 @@ CREATE TABLE `commande` (
   `commande_commande_totale_nette` int(11) DEFAULT NULL,
   `commande_tva` int(11) DEFAULT NULL,
   `commande_ttc` int(11) DEFAULT NULL,
-  `client_code_client` int(11) NOT NULL
+  `client_code_client` int(11) NOT NULL,
+  PRIMARY KEY (`commande_code_client`),
+  KEY `client_code_client` (`client_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -66,12 +73,14 @@ CREATE TABLE `commande` (
 -- Table structure for table `commercial`
 --
 
-CREATE TABLE `commercial` (
+DROP TABLE IF EXISTS `commercial`;
+CREATE TABLE IF NOT EXISTS `commercial` (
   `commercial_code_client` varchar(50) NOT NULL,
   `commercial_code` int(11) DEFAULT NULL,
   `commercial_nom` varchar(20) DEFAULT NULL,
   `commercial_prenom` varchar(20) DEFAULT NULL,
-  `commercial_region` varchar(20) DEFAULT NULL
+  `commercial_region` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`commercial_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -91,9 +100,12 @@ INSERT INTO `commercial` (`commercial_code_client`, `commercial_code`, `commerci
 -- Table structure for table `contient`
 --
 
-CREATE TABLE `contient` (
+DROP TABLE IF EXISTS `contient`;
+CREATE TABLE IF NOT EXISTS `contient` (
   `produit_reference_gg` int(11) NOT NULL,
-  `commande_code_client` int(11) NOT NULL
+  `commande_code_client` int(11) NOT NULL,
+  PRIMARY KEY (`produit_reference_gg`,`commande_code_client`),
+  KEY `commande_code_client` (`commande_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -102,7 +114,8 @@ CREATE TABLE `contient` (
 -- Table structure for table `customer_fiche`
 --
 
-CREATE TABLE `customer_fiche` (
+DROP TABLE IF EXISTS `customer_fiche`;
+CREATE TABLE IF NOT EXISTS `customer_fiche` (
   `client_code_client` int(11) NOT NULL,
   `client_pro_part` varchar(20) DEFAULT NULL,
   `client_societe_nom` varchar(50) DEFAULT NULL,
@@ -127,7 +140,9 @@ CREATE TABLE `customer_fiche` (
   `client_fact_contact_nom` varchar(20) DEFAULT NULL,
   `client_fact_contact_tel` int(11) DEFAULT NULL,
   `client_fact_contact_mail` varchar(50) DEFAULT NULL,
-  `commercial_code_client` varchar(50) NOT NULL
+  `commercial_code_client` varchar(50) NOT NULL,
+  PRIMARY KEY (`client_code_client`),
+  KEY `commercial_code_client` (`commercial_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -162,9 +177,12 @@ INSERT INTO `customer_fiche` (`client_code_client`, `client_pro_part`, `client_s
 -- Table structure for table `expedition`
 --
 
-CREATE TABLE `expedition` (
+DROP TABLE IF EXISTS `expedition`;
+CREATE TABLE IF NOT EXISTS `expedition` (
   `bdl_code_client` int(11) NOT NULL,
-  `fact_code_client` int(11) NOT NULL
+  `fact_code_client` int(11) NOT NULL,
+  PRIMARY KEY (`bdl_code_client`,`fact_code_client`),
+  KEY `fact_code_client` (`fact_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -173,7 +191,8 @@ CREATE TABLE `expedition` (
 -- Table structure for table `facturation`
 --
 
-CREATE TABLE `facturation` (
+DROP TABLE IF EXISTS `facturation`;
+CREATE TABLE IF NOT EXISTS `facturation` (
   `fact_code_client` int(11) NOT NULL,
   `fact_date_edition` datetime DEFAULT NULL,
   `fact_num_cde` int(11) DEFAULT NULL,
@@ -184,7 +203,8 @@ CREATE TABLE `facturation` (
   `fact_total_tva` int(11) DEFAULT NULL,
   `fact_total_ttc` int(11) DEFAULT NULL,
   `fact_date_paie_theorique` date DEFAULT NULL,
-  `fact_date_paie_reel` date DEFAULT NULL
+  `fact_date_paie_reel` date DEFAULT NULL,
+  PRIMARY KEY (`fact_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -193,9 +213,12 @@ CREATE TABLE `facturation` (
 -- Table structure for table `fourni`
 --
 
-CREATE TABLE `fourni` (
+DROP TABLE IF EXISTS `fourni`;
+CREATE TABLE IF NOT EXISTS `fourni` (
   `produit_reference_gg` int(11) NOT NULL,
-  `fournisseur_num` int(11) NOT NULL
+  `fournisseur_num` int(11) NOT NULL,
+  PRIMARY KEY (`produit_reference_gg`,`fournisseur_num`),
+  KEY `fournisseur_num` (`fournisseur_num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -204,7 +227,8 @@ CREATE TABLE `fourni` (
 -- Table structure for table `fournisseur`
 --
 
-CREATE TABLE `fournisseur` (
+DROP TABLE IF EXISTS `fournisseur`;
+CREATE TABLE IF NOT EXISTS `fournisseur` (
   `fournisseur_num` int(11) NOT NULL,
   `fournisseur_nom` varchar(20) DEFAULT NULL,
   `fournisseur_contact_nom` varchar(50) DEFAULT NULL,
@@ -212,7 +236,8 @@ CREATE TABLE `fournisseur` (
   `fournisseur_contact_mail` varchar(50) DEFAULT NULL,
   `fournisseur_adresse` varchar(50) DEFAULT NULL,
   `fournisseur_cp` int(11) DEFAULT NULL,
-  `fournisseur_ville` varchar(20) DEFAULT NULL
+  `fournisseur_ville` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`fournisseur_num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -233,14 +258,16 @@ INSERT INTO `fournisseur` (`fournisseur_num`, `fournisseur_nom`, `fournisseur_co
 -- Table structure for table `mytable`
 --
 
-CREATE TABLE `mytable` (
-  `id` mediumint(8) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `mytable`;
+CREATE TABLE IF NOT EXISTS `mytable` (
+  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
   `commercial_code` mediumint(9) DEFAULT NULL,
   `commercial_code_client` varchar(10) DEFAULT NULL,
   `commercial_nom` varchar(255) DEFAULT NULL,
   `commercial_prenom` varchar(255) DEFAULT NULL,
-  `commercial_region` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `commercial_region` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mytable`
@@ -359,9 +386,12 @@ INSERT INTO `mytable` (`id`, `commercial_code`, `commercial_code_client`, `comme
 -- Table structure for table `paiement`
 --
 
-CREATE TABLE `paiement` (
+DROP TABLE IF EXISTS `paiement`;
+CREATE TABLE IF NOT EXISTS `paiement` (
   `client_code_client` int(11) NOT NULL,
-  `fact_code_client` int(11) NOT NULL
+  `fact_code_client` int(11) NOT NULL,
+  PRIMARY KEY (`client_code_client`,`fact_code_client`),
+  KEY `fact_code_client` (`fact_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -370,9 +400,12 @@ CREATE TABLE `paiement` (
 -- Table structure for table `preparation`
 --
 
-CREATE TABLE `preparation` (
+DROP TABLE IF EXISTS `preparation`;
+CREATE TABLE IF NOT EXISTS `preparation` (
   `commande_code_client` int(11) NOT NULL,
-  `bdl_code_client` int(11) NOT NULL
+  `bdl_code_client` int(11) NOT NULL,
+  PRIMARY KEY (`commande_code_client`,`bdl_code_client`),
+  KEY `bdl_code_client` (`bdl_code_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -381,7 +414,8 @@ CREATE TABLE `preparation` (
 -- Table structure for table `produit_fiche`
 --
 
-CREATE TABLE `produit_fiche` (
+DROP TABLE IF EXISTS `produit_fiche`;
+CREATE TABLE IF NOT EXISTS `produit_fiche` (
   `produit_reference_gg` int(11) NOT NULL,
   `produit_nom` varchar(20) DEFAULT NULL,
   `produit_categorie` varchar(200) DEFAULT NULL,
@@ -393,7 +427,8 @@ CREATE TABLE `produit_fiche` (
   `produit_libelle_court` varchar(30) DEFAULT NULL,
   `produit_libelle_long` varchar(200) DEFAULT NULL,
   `produit_photo` varchar(500) DEFAULT NULL,
-  `produit_publication_site` varchar(50) DEFAULT NULL
+  `produit_publication_site` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`produit_reference_gg`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -528,116 +563,13 @@ INSERT INTO `produit_fiche` (`produit_reference_gg`, `produit_nom`, `produit_cat
 -- Table structure for table `selectionne`
 --
 
-CREATE TABLE `selectionne` (
+DROP TABLE IF EXISTS `selectionne`;
+CREATE TABLE IF NOT EXISTS `selectionne` (
   `client_code_client` int(11) NOT NULL,
-  `produit_reference_gg` int(11) NOT NULL
+  `produit_reference_gg` int(11) NOT NULL,
+  PRIMARY KEY (`client_code_client`,`produit_reference_gg`),
+  KEY `produit_reference_gg` (`produit_reference_gg`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `bdl`
---
-ALTER TABLE `bdl`
-  ADD PRIMARY KEY (`bdl_code_client`);
-
---
--- Indexes for table `commande`
---
-ALTER TABLE `commande`
-  ADD PRIMARY KEY (`commande_code_client`),
-  ADD KEY `client_code_client` (`client_code_client`);
-
---
--- Indexes for table `commercial`
---
-ALTER TABLE `commercial`
-  ADD PRIMARY KEY (`commercial_code_client`);
-
---
--- Indexes for table `contient`
---
-ALTER TABLE `contient`
-  ADD PRIMARY KEY (`produit_reference_gg`,`commande_code_client`),
-  ADD KEY `commande_code_client` (`commande_code_client`);
-
---
--- Indexes for table `customer_fiche`
---
-ALTER TABLE `customer_fiche`
-  ADD PRIMARY KEY (`client_code_client`),
-  ADD KEY `commercial_code_client` (`commercial_code_client`);
-
---
--- Indexes for table `expedition`
---
-ALTER TABLE `expedition`
-  ADD PRIMARY KEY (`bdl_code_client`,`fact_code_client`),
-  ADD KEY `fact_code_client` (`fact_code_client`);
-
---
--- Indexes for table `facturation`
---
-ALTER TABLE `facturation`
-  ADD PRIMARY KEY (`fact_code_client`);
-
---
--- Indexes for table `fourni`
---
-ALTER TABLE `fourni`
-  ADD PRIMARY KEY (`produit_reference_gg`,`fournisseur_num`),
-  ADD KEY `fournisseur_num` (`fournisseur_num`);
-
---
--- Indexes for table `fournisseur`
---
-ALTER TABLE `fournisseur`
-  ADD PRIMARY KEY (`fournisseur_num`);
-
---
--- Indexes for table `mytable`
---
-ALTER TABLE `mytable`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `paiement`
---
-ALTER TABLE `paiement`
-  ADD PRIMARY KEY (`client_code_client`,`fact_code_client`),
-  ADD KEY `fact_code_client` (`fact_code_client`);
-
---
--- Indexes for table `preparation`
---
-ALTER TABLE `preparation`
-  ADD PRIMARY KEY (`commande_code_client`,`bdl_code_client`),
-  ADD KEY `bdl_code_client` (`bdl_code_client`);
-
---
--- Indexes for table `produit_fiche`
---
-ALTER TABLE `produit_fiche`
-  ADD PRIMARY KEY (`produit_reference_gg`);
-
---
--- Indexes for table `selectionne`
---
-ALTER TABLE `selectionne`
-  ADD PRIMARY KEY (`client_code_client`,`produit_reference_gg`),
-  ADD KEY `produit_reference_gg` (`produit_reference_gg`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `mytable`
---
-ALTER TABLE `mytable`
-  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- Constraints for dumped tables
