@@ -138,6 +138,11 @@ h6{
   visibility: visible;
   color: red;
 }
+.erreur{
+display: none;
+
+}
+
 footer {
   background: whitesmoke;
   margin-top: 3%;
