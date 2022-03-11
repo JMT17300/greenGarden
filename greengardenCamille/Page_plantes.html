@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" > 
+    <link href="css/normalize.css" rel="stylesheet" >
+    
+   
+    <title>Projet Green Garden</title>
+</head>
+<body>
+
+    <!-- header-->
+    <header>
+
+      <div class="beforeheader">
+        <a class="moncompte" href="index_moncompte.html"><i class="fas fa-user"></i>mon compte</a>
+        <a class="newsletter" href="index_newsletter.html"><i class="fas fa-envelope"></i>s'inscrire à la newsletter</a>
+      </div>
+
+      <img class="logo" src="media/logo.png" alt="logodusite">
+      
+      <div class="container_menu_search">
+
+        <div id="mySidenav" class="sidenav">
+ 
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+          <a class="icones" href="index.html"><i class="fas fa-home"></i>accueil</a>
+          <div class="dropdown">
+            <a class="item" href="Page_plantes.html"><i class="fa-solid fa-seedling"></i>Plantes</a>
+            <div class="dropdown-content">
+              <a href="#">Plantes d'extérieures</a>
+              <a href="#">Plantes d'intérieures</a>
+              <a href="#">Arbres et arbustes</a>
+            </div>
+          </div>
+          <a class="icones" href="Outils_entretiens.html"><i class="fa-solid fa-screwdriver"></i>Outils et entretiens</a>
+          <a class="icones" href="idees_conseils.html"><i class="fa-solid fa-comment"></i>Conseils</a>
+          <hr>
+          <a class="moncompte" href="index_moncompte.html"><i class="fas fa-user"></i>Mon compte</a>
+          <a class="menu" href="les_offres_du_moment.html"><i class="fa-duotone fa-percent"></i>Les offres du moment</a>
+          <hr>
+        </div>
+
+    <!-- menu version PC-->
+    <div id="ensemble-search-menu">
+      <div class="menuPC">
+        <a class="item" href="index.html"></i>Accueil</a>
+        <div class="dropdown">
+          <a class="item" href="Page_plantes.html"></i>Plantes</a><i class="arrow fas fa-angle-down"></i>
+          <div class="dropdown-content">
+            <a href="#">Plantes d'extérieures</a>
+            <a href="#">Plantes d'intérieures</a>
+            <a href="#">Arbres et arbustes</a>
+          </div>
+        </div>
+        <a class="item" href="Outils_entretiens.html"></i>Outils et entretiens</a>
+        <a class="item" href="idees_conseils.html"></i>Conseils</a>
+       </div>
+
+
+   
+    <div class="search_bar">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input type="text" placeholder="Mes recherches..." name="search">
+    </div>
+ 
+</div>
+
+       <!-- menu et search bar-->
+       <div class="search_menu">
+        <span class="menuburger"onclick="openNav()">&#9776;</span>
+        <div class="search_bar">
+          <form>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Mes recherches..." name="search">
+          </form>
+        </div>
+       </div>
+      
+    </header>
+
+ 
+<!-- Contenu Page produits-->
+
+<div class="cards">
+  <div class="card">
+    <img src="media/plantes.JPG" alt="Denim Jeans" style="width:100%">
+    <h1>Calathea orbifolia</h1>
+    <p>Prix exclusif : 49.90€</p>
+    <p> Notre calathea « Théo » est une valeur sûre pour apporter une touche de déco végétale aussi tendance que luxuriante dans votre salon.</p>
+    <p><button>Ajouter au panier</button></p>
+  </div>
+  <div class="card">
+    <img src="media/plantes_kentia.JPG" alt="Denim Jeans" style="width:100%">
+    <h1>Kentia Gustave</h1>
+    <p>Prix exclusif : 69.90€</p>
+    <p>Avec sa forme toute en hauteur et sa multitude de feuilles, Gustave est la plante idéale pour apporter une touche luxuriante dans une pièce</p>
+    <p><button>Ajouter au panier</button></p>
+  </div>
+  <div class="card">
+    <img src="media/plante_pot_bleu.png" alt="Denim Jeans" style="width:100%">
+    <h1>Zuiverend Groen</h1>
+    <p>Prix exclusif : 66€</p>
+    <p>Créez un paradis tropical avec le palmier Areca (Dypsis lutescens), la plante-araignée (Chlorophytum) 'Atlantic', le nid d'oiseau (Asplenium) 'Crispy Wave' et la fleur de lune(Spathiphyllum) 'Yes'. Les cache-pots bleus 'Vibes' de Elho complètent le tableau..</p>
+    <p><button class="buttonajoutpanier">Ajouter au panier</button></p>
+  </div>
+
+
+</div>
+
+<!-- footer -->
+<footer>
+  <a href="CGV.html">CGV</a>
+  <a href="mentions_legales.html">Mentions légales</a>
+  <a href="donnees.html">Protection des données</a>
+  <a href="paiement.html">Moyens de paiement</a>
+  <a href="livraisons.html">Conditions de livraison</a>
+</footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"> </script> 
+        
+</body>
+</html>

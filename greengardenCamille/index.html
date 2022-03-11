@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" > 
+    <link href="css/normalize.css" rel="stylesheet" >
+    
+   
+    <title>Projet Green Garden</title>
+</head>
+<body>
+
+    <!-- header-->
+    <header>
+
+      <div class="beforeheader">
+        <a class="moncompte" href="index_moncompte.html"><i class="fas fa-user"></i>mon compte</a>
+        <a class="newsletter" href="index_newsletter.html"><i class="fas fa-envelope"></i>s'inscrire à la newsletter</a>
+      </div>
+
+      <img class="logo" src="media/logo.png" alt="logodusite">
+      
+      <div class="container_menu_search">
+
+        <div id="mySidenav" class="sidenav">
+ 
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+          <a class="icones" href="index.html"><i class="fas fa-home"></i>accueil</a>
+         
+          <div class="dropdown">
+            <a class="item" href="Page_plantes.html"><i class="fa-solid fa-seedling"></i>Plantes</a>
+            <div class="dropdown-content">
+              <a href="#">Plantes d'extérieures</a>
+              <a href="#">Plantes d'intérieures</a>
+              <a href="#">Arbres et arbustes</a>
+            </div>
+          </div>
+
+          <a class="icones" href="Outils_entretiens.html"><i class="fa-solid fa-screwdriver"></i>Outils et entretiens</a>
+          <a class="icones" href="idees_conseils.html"><i class="fa-solid fa-comment"></i>Conseils</a>
+          <hr>
+          <a class="moncompte" href="index_moncompte.html"><i class="fas fa-user"></i>Mon compte</a>
+          <a class="menu" href="les_offres_du_moment.html"><i class="fa-duotone fa-percent"></i>Les offres du moment</a>
+          <hr>
+        </div>
+
+    <!-- menu version PC-->
+    <div id="ensemble-search-menu">
+      <div class="menuPC">
+        <a class="item" href="index.html"></i>Accueil</a>
+        <div class="dropdown">
+          <a class="item" href="Page_plantes.html"></i>Plantes</a><i class="arrow fas fa-angle-down"></i>
+          <div class="dropdown-content">
+            <a href="#">Plantes d'extérieures</a>
+            <a href="#">Plantes d'intérieures</a>
+            <a href="#">Arbres et arbustes</a>
+          </div>
+        </div>
+        <a class="item" href="Outils_entretiens.html"></i>Outils et entretiens</a>
+        <a class="item" href="idees_conseils.html"></i>Conseils</a>
+       </div>
+
+   
+    <div class="search_bar">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input type="text" placeholder="Mes recherches..." name="search">
+    </div>
+ 
+</div>
+
+
+
+       <!-- menu et search bar-->
+       <div class="search_menu">
+        <span class="menuburger"onclick="openNav()">&#9776;</span>
+        <div class="search_bar">
+          <form>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Mes recherches..." name="search">
+          </form>
+        </div>
+       </div>
+      
+    </header>
+
+  <!-- slider-->
+    <div class="diapo">
+
+      <div class="elements">
+
+        <div class="element active">
+          <img class="slide1" src="media/slide1.jpg" alt="vendeur">
+          <div class="caption">
+            <p>DES CONSEILS</p>
+            <p class="sous-texte">Par nos experts</p>
+          </div>
+        </div>
+
+        <div class="element">
+          <img class="slide1" src="media/slide2.jpg" alt="boutique">
+          <div class="caption">
+            <p>UNE BOUTIQUE</p>
+            <p class="sous-texte">Toujours à votre service</p>
+          </div>
+        </div>
+
+        <div class="element">
+          <img class="slide1" src="media/slide3.png" alt="outils">
+          <div class="caption">
+            <p>DES OUTILS</p>
+            <p class="sous-texte">À tous les prix</p>
+          </div>
+        </div>
+
+      </div>
+
+      <i id="nav-gauche" class="fa-solid fa-angle-left"></i>
+      <i id="nav-droite" class="fa-solid fa-angle-right"></i>
+  
+    </div>
+     
+    
+  <!-- Les offres du moment-->
+    <div class="fond">
+      <p class="titre_rubrique">Les offres du moment</p>
+      <a href="les_offres_du_moment.html" class="button">Je découvre</a>
+    </div>
+
+  <!-- Idées et conseils-->
+
+  <div class="ensemblerubrique_ideesetconseils">
+    <p class="titre_rubrique idees_et_conseils">Idées & conseils</p>
+    
+    <div class="conseil">
+     <!-- <img class="conseils" src="media/conseils.jpg" alt="conseils">-->
+    </div>
+    
+    <div class="rubrique_idees_conseils">
+      <a href="idees_conseils.html" class="buttonsavoirplus">En savoir plus</a>
+    </div>
+  </div>
+ 
+<!-- Les trois derniers articles du blog-->
+
+<div class="grandtitre">
+  <p class="titre_rubrique">À la une</p> 
+  <img class="icone_fleur" src="media/icone_fleur.png" alt="icone_fleur">
+</div>
+
+<div class="cards">
+  <div class="card">
+    <img src="media/tomate.jpg" class ="media_card" alt="tomate">
+    <h1>#Cultiverensemble</h1>
+    <p class="title">Comment faire pousser des tomates ?</p>
+    <p class="contenu_rubrique_ala1">Qui donc possède un potager sans aucun pied de tomate ? Il faut dire que ce légume est le chouchou de tous et que sa culture est des plus faciles...</p>
+    <button class ="bouton_card_1" onclick="window.location.href = 'article_tomates.html';">Lire plus</button>
+  </div>
+  
+  <div class="card">
+    <img src="media/plante_interieur.jpg" class ="media_card" alt="plante_interieur" >
+    <h1>#Cultiverensemble</h1>
+    <p class="title">5 choses à savoir sur les plantes d'intérieur</p>
+    <p class="contenu_rubrique_ala1">Que vous soyez experts ou simples débutants, apporter les meilleurs soins à vos plantes d'intérieur vous tient à cœur. Vous trouverez ci-dessous 10 conseils pour vous aider à améliorer vos compétences...</p>
+    <button class ="bouton_card_2" onclick="window.location.href = 'article_plantes_interieures.html';">Lire plus</button>
+  </div>
+  
+  <div class="card">
+    <img src="media/plante-hiver.jpg" class ="media_card" alt="plante-hiver">
+    <h1>#Cultiverensemble</h1>
+    <p class="title">Entretenir ses plantes en hiver</p>
+    <p class="contenu_rubrique_ala1">Il fait plus froid dehors et les feuilles jaunissent ? C'est signe que vous devez prendre soin de vos plantes d'intérieur aussi. Il est important de bien s'occuper des plantes d'intérieur en hiver, et de les choyer davantage....</p>
+    <button class ="bouton_card_3" onclick="window.location.href = 'article_entretenir_plantes.html';">Lire plus</button>
+  </div>
+</div>
+
+
+<!-- footer -->
+<footer>
+  <a href="CGV.html">CGV</a>
+  <a href="mentions_legales.html">Mentions légales</a>
+  <a href="donnees.html">Protection des données</a>
+  <a href="paiement.html">Moyens de paiement</a>
+  <a href="livraisons.html">Conditions de livraison</a>
+</footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"> </script> 
+        
+</body>
+</html>
