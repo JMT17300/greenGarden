@@ -1,0 +1,173 @@
+
+*{
+  box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+body {
+  background: rgb(238, 233, 224);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+h1{
+    text-align: center;
+    color: rgb(30, 110, 30);
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: underline;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+h5{
+   /* margin-top: 2em;*/
+    color: rgb(30, 110, 30);
+   text-align: center;
+}
+
+.btn-success{
+  float: center;
+  margin-top: 5px;
+  
+}
+
+
+.wrapper h5{
+
+  font-weight: 900;
+  font-size: 35px;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  transition: all 0,5s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: rgb(30, 110, 30);
+}
+
+p{
+  color: rgb(30, 110, 30);
+  font-size: large;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+h6{
+  color: green;
+}
+
+
+
+.carousel{
+   margin-bottom: 30px;
+}
+
+.fanny{
+  color: green;
+  border: 1px solid green;
+  margin-right: 3% !important
+  
+}
+
+
+.cadre{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 50px;
+  border: 1px solid green
+}
+
+
+
+
+
+
+
+.text-small {
+  font-size: 0rem;
+}
+  
+.img-fluid {
+  width: 100%;
+  height: auto;
+  padding: 10% !important
+  ;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+}
+
+.jmt{
+  height: 300px;
+  object-fit: cover;
+  padding-top: 5%;
+  padding-bottom: 5%;
+ 
+}
+.categories{
+  margin: 3%;
+ 
+}
+
+.card-body {
+  height: 50%;
+  padding: 5%;
+}
+
+.form-control {
+  background: whitesmoke;
+  border-color: greenyellow;
+  padding-left: 50px;
+}
+  
+.form-control:focus {
+  background: #ebf1ec;
+ }
+
+ .form{
+  background: #ebf1ec;
+ }
+ .compte{
+  visibility: hidden;
+}
+
+.error{
+  visibility: visible;
+  color: red;
+}
+.erreur{
+display: none;
+
+}
+
+footer {
+  background: whitesmoke;
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+  border: 1px solid green;  
+  }
+ 
+  
+  
+  /* ==========================================
+      CUSTOM UTILS CLASSES
+    ========================================== */
+    body, html {
+      height: 100%;
+    }
