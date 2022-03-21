@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cours de JQuery</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<h1> Manipulation du <mark>DOM HTML</mark></h1>
+
+    <span id='test'></span>
+
+    <!--on inclus la librairie jQuery-->
+    <script src="js/jquery-3.6.0.js"></script>
+
+    <script>
+$(document).ready(function(){
+var titre = $('h1').text();
+$('h1').text('<mark>DOM</mark> manipulé');
+
+$('#test').text(titre);
+   
+});
+
+
+    </script>
+
+<!--
+
+change la couleur de fond de la one de saisie
+$(document).ready(function(){
+$('#prenom').focus(function(){
+$(this).css('background-color', 'yellow');
+});
+});
+
+
+/*methode keydown & keyup
+$(document).ready(function(){
+$('#prenom').keydown(function(){
+$(this).css('background-color','#69c');
+});
+$('#prenom').keyup(function(){
+$(this).css('background-color', '#C72');
+});
+})
+*/
+
+/*function dblclick sur paragraphe p donne disparition du dit paragraphe
+$(document).ready(function(){
+$('p').dblclick(function(){
+//this precise le paragraphe concerné et seulement lui
+$(this).hide();
+})
+});
+*/
+
+/*function click sur paragraphe p donne disparition du dit paragraphe
+$(document).ready(function(){
+$('p').click(function(){
+//this precise le paragraphe concerné et seulement lui
+$(this).hide();
+});
+});
+*/
+
+-->
+
+
+</body>
+
+
+
+</html>

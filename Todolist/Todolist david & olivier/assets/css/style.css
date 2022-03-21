@@ -1,0 +1,63 @@
+body {
+    background-color: #fadc78; 
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    margin-top: 10%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    border-radius: 15px;
+}
+
+.btn-primary {
+    margin-left: 70%;
+}
+
+li {
+    display: flex;
+    gap: 80%;
+    margin-top: 25px;
+    border-bottom: 25px;
+    height: 70px;
+    line-height: 70px;
+    background-color:rgb(255, 158, 46);
+    list-style-type: none;
+    border-radius: 7px;
+    vertical-align: middle;
+}
+
+p {
+    color: white;
+    padding-left: 30px;
+}
+
+.btnPoubelle {
+    margin-top: 12px ;
+    background-color: rgb(251, 255, 0);
+    border: 0px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.btnPoubelle:hover{
+    background-color: #e7d800;
+}
+
+
+
+.btn-light {
+display: block;
+
+margin-left: auto;
+margin-right: auto;
+}
+
+.btn-light:hover {
+    background-color: rgb(202, 202, 202);
+}

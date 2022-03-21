@@ -1,0 +1,62 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.container{
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.slide-box{
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.left-img{
+    height: 60%;
+    width: 20%;
+    background: "" ;
+    object-fit: cover;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 2s ease-in-out;
+}
+.center-img{
+    height: 80%;
+    width: 60%;
+    background: "" ;
+    object-fit: cover;
+    transition: all 2s ease-in-out;
+}
+.right-img{
+    height: 60%;
+    width: 20%;
+    background: "" ;
+    object-fit: cover;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 2s ease-in-out;
+}
+.icofont-rounded-left{
+    font-size: 100px;
+    opacity: 1;
+    cursor: pointer;
+}
+.icofont-rounded-right{
+    font-size: 100px;
+    opacity: 1;
+    cursor: pointer;
+}

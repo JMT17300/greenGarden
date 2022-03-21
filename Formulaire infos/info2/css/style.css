@@ -1,0 +1,31 @@
+
+
+legend{
+  
+    text-align: center;
+    color: whitesmoke;
+    border: solid;
+    position: relative;
+    background-color: rgb(146, 146, 189);
+}
+
+form{
+    width: 100%;
+    padding:20% 5%;
+    background-color: rgb(231, 234, 241);
+}
+
+.boutonvalider{
+    background-color: rgb(146, 146, 189);
+    color: whitesmoke;
+   margin-left: 45%;
+}
+
+span{
+    visibility: hidden;
+}
+
+.error{
+    visibility: visible;
+    color: blueviolet;
+}

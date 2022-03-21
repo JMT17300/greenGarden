@@ -1,0 +1,22 @@
+section#list-villes {
+    margin-top: 3em;
+}
+.container {
+    background-color: white;
+    color: black;
+}
+section#list-villes img {
+    width: 19rem;
+    height: 12rem;
+}
+    a {
+    text-align: center;
+    padding: 2%;
+    color: green;
+}
+    h1 {
+    color: green;
+}
+h2 {
+    color: green;
+}

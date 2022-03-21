@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&family=Manjari&family=Zen+Maru+Gothic:wght@500&display=swap');
+
+body{
+    font-family: 'Manjari';
+    background-color: wheat;
+}
+.box{
+    width: 800px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    overflow: scroll;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+}
+
+form button{
+    margin-left: 10px;
+}
+
+li{
+    
+    list-style: none;
+    color: rgb(0, 0, 0);
+    padding: 0.5em;
+    margin: 1em;
+    border: solid 1px rgb(158, 158, 172);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+li:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+img{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    animation-name: cat;
+    animation-duration: 3s;
+    animation-delay: 0s;
+
+}
+
+@keyframes cat {
+    0% {transform: translateX(-30%);}
+    100% {transform: translateX(3%);}
+}
+
+
+.icone {
+  position: relative;
+  left: -25px;
+}
+
+
+.icone-hahaha{
+    position: relative;
+    bottom: 1px;
+    left: 525px;
+}
+
+li{
+    margin: 5px;
+}
+
+
+#icona {
+    position: relative;
+    left : -30px;
+}
+
+#supprima{
+    display: block;
+    margin: 0 auto;
+}
