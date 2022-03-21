@@ -1,0 +1,26 @@
+Exercice 1 :
+Savoir si une chaîne de caractères est une couleur hexadécimale ou non.
+
+^#([a-fA-F0-9]{6}| [a-fA-F0-9]{3}
+
+Exercice 2 :
+Savoir si une chaîne de caractères est un mail valide (TLD de 2 à 6 caractères)
+
+^[a-fA-F0-9]{1,} @ [a-fA-F0-9]{1,}
+
+Exercice 3 :
+Savoir si une chaîne de caractères est un numéro de téléphone au format : 0652320478 ou +33652320478.
+
+
+([0-9]){10}) | (1+[0-9]){11})
+
+
+Exercice 4 :
+Savoir si un mot de passe contient bien au moins 2 majuscules, 1 minuscule,  2 chiffres et un signe & ou # ou @, avec une longueur est de 8.
+
+
+^(?=.{8}$)(?=(?:.*[A-Z]){2})(?=.*[a-z])(?=.*[&#@])(?=(?:.*[0-9]){2}).*
+
+
+php
+https://www.php.net/manual/fr/intro-whatis.php
